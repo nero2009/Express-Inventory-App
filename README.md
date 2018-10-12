@@ -25,13 +25,13 @@ Npm start
 
 ### Login details
 
-** For Admin
+* For Admin
 ```bash
 Email: admin@mail.com
 Password: admin
 ```
 
-** For User
+* For User
 ```bash
 Email: user@mail.com
 Password: user
