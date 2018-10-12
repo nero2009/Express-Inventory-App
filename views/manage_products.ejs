@@ -1,0 +1,46 @@
+<% include ./partials/head.ejs %>
+<title>Index</title>
+</head>
+<body>
+    
+    <% include ./partials/navbar.ejs %>
+    <div class="container">
+        <div class="row subheader">
+            <div class=".col-md-9">
+                <h3><%= title %></h3>
+            </div>
+            <div class=".col-md-3 ml-auto">
+                <a href="/manage/products/add">Add Product</a>
+            </div>
+        </div>
+            <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">Quantity</th>
+                        <th scope="col">Part Number</th>
+                        <th scope="col">Delete</th>
+                        <th scope="col">Edit</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <% products.forEach((product)=>{ %>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td><%= product.name %></td>
+                            <td><%= product.description %></td>
+                            <td><%= product.quantity %></td>
+                            <td><%= product.part_number %></td>
+                            <td><a class="btn btn-tiny btn-danger product-delete" href="/manage/products" data-product-id="<%= product._id %>">Delete</a></td>
+                            <td><a class="btn btn-tiny btn-info" href="/manage/products/edit/<%= product._id %>">Edit</a></td>
+                          </tr>
+                     <% }) %>
+                     
+                    </tbody>
+                  </table>
+    </div>
+    <% include ./partials/footer.ejs %>
+</body>
+</html>

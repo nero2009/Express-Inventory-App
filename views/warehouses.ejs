@@ -1,0 +1,37 @@
+<% include ./partials/head.ejs %>
+<title>Index</title>
+</head>
+<body>
+    
+    <% include ./partials/navbar.ejs %>
+    <div class="container">
+        <div class="subheader">
+            <h3><%= title %></h3>
+    </div>
+    <div class="row">
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Description</th>
+                <th scope="col">Quantity</th>
+              </tr>
+            </thead>
+            <tbody>
+                <% products.forEach((product)=>{ %>
+                  <tr>
+                      <th scope="row">1</th>
+                      <td><%= product.name %></td>
+                      <td><%= product.description %></td>
+                      <td><%= product.quantity %></td>
+                    </tr>
+               <% }) %>
+            </tbody>
+          </table>
+    </div>
+            
+    </div>
+    <% include ./partials/footer.ejs %>
+</body>
+</html>

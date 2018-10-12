@@ -1,0 +1,42 @@
+<% include ./partials/head.ejs %>
+<title>Index</title>
+</head>
+<body>
+    
+    <% include ./partials/navbar.ejs %>
+    <div class="container" >
+      <div class="row subheader" >
+        <div class=".col-md-9">
+            <h3><%= title %></h3>
+        </div>
+        <div class=".col-md-3 ml-auto">
+            <a href="/manage/warehouse/add">Add Warehouse</a>
+        </div>
+    </div>
+            <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">Delete</th>
+                        <th scope="col">Edit</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <% warehouse.forEach((house)=>{ %>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td><%= house.name %></td>
+                            <td><%= house.description %></td>
+                            <td><a class="btn btn-tiny btn-danger warehouse-delete" href="/manage/warehouse" data-warehouse-id="<%= house._id %>">Delete</a></td>
+                            <td><a class="btn btn-tiny btn-info" href="/manage/warehouse/edit/<%= house._id %>">Edit</a></td>
+                          </tr>
+                     <% }) %>
+                     
+                    </tbody>
+                  </table>
+    </div>
+    <% include ./partials/footer.ejs %>
+</body>
+</html>
