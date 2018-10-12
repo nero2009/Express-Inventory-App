@@ -9,7 +9,7 @@
             <h3><%= title %></h3>
     </div>
       <div class="row">
-          <table class="table">
+          <table class="table table-bordered">
               <thead>
                 <tr>
                   <th scope="col">#</th>
@@ -19,9 +19,9 @@
                 </tr>
               </thead>
               <tbody>
-                  <% warehouses.forEach((house)=>{ %>
+                  <% warehouses.forEach((house, i)=>{ %>
                     <tr>
-                        <th scope="row">1</th>
+                        <th scope="row"><%= i+1 %></th>
                         <td><%= house.name %></td>
                         <td><%= house.description %></td>
                         <td><a class="btn btn-tiny btn-danger" href="/products/warehouse/<%= house._id %>">View Warehouse</a></td>

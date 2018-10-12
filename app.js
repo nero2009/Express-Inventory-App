@@ -13,7 +13,7 @@ const port = 3000
 const DB_URI = "mongodb://admin:admin123@ds044787.mlab.com:44787/inventory" // mongodb://domain:port/database-name
 
 // Connect to MongoDB
-mongoose.connect(DB_URI)
+mongoose.connect(DB_URI, { useMongoClient: true })
 
 // CONNECTION EVENTS
 mongoose.connection.once('connected', function() {

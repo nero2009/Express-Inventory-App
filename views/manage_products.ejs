@@ -13,7 +13,7 @@
                 <a href="/manage/products/add">Add Product</a>
             </div>
         </div>
-            <table class="table">
+            <table class="table table-bordered">
                     <thead>
                       <tr>
                         <th scope="col">#</th>
@@ -26,9 +26,9 @@
                       </tr>
                     </thead>
                     <tbody>
-                      <% products.forEach((product)=>{ %>
+                      <% products.forEach((product,i)=>{ %>
                         <tr>
-                            <th scope="row">1</th>
+                            <th scope="row"><%= i+1 %></th>
                             <td><%= product.name %></td>
                             <td><%= product.description %></td>
                             <td><%= product.quantity %></td>

@@ -13,7 +13,7 @@
             <a href="/manage/warehouse/add">Add Warehouse</a>
         </div>
     </div>
-            <table class="table">
+            <table class="table table-bordered">
                     <thead>
                       <tr>
                         <th scope="col">#</th>
@@ -24,9 +24,9 @@
                       </tr>
                     </thead>
                     <tbody>
-                      <% warehouse.forEach((house)=>{ %>
+                      <% warehouse.forEach((house,i)=>{ %>
                         <tr>
-                            <th scope="row">1</th>
+                            <th scope="row"><%= i+1 %></th>
                             <td><%= house.name %></td>
                             <td><%= house.description %></td>
                             <td><a class="btn btn-tiny btn-danger warehouse-delete" href="/manage/warehouse" data-warehouse-id="<%= house._id %>">Delete</a></td>

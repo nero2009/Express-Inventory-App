@@ -39,9 +39,7 @@ module.exports = function(passport) {
         }).catch(function(err) {done(err, false)});
     }));
 
-    // =========================================================================
-    // LOCAL SIGNUP ============================================================
-    // =========================================================================
+    
     passport.use('local-signup', new LocalStrategy({
         // by default, local strategy uses username and password, we will override with email
         usernameField : 'email',

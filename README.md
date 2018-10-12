@@ -27,7 +27,7 @@ Npm start
 
 ** For Admin
 ```bash
-Email: author@mail.com
+Email: admin@mail.com
 Password: admin
 ```
 
