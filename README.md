@@ -30,3 +30,9 @@ Npm start
 Email: author@mail.com
 Password: admin
 ```
+
+### Stack details
+This Application was built with the following technologies:
+** Express/Node js for the backend
+** MongoDb for the Database
+** Ejs(Embedded Javascript ) for the View engine
