@@ -9,7 +9,7 @@ const passport = require('passport')
 // MongoDB Driver
 const mongoose = require('mongoose')
 
-const port = 3000
+const port =  process.env.PORT || 3000
 const DB_URI = "mongodb://admin:admin123@ds044787.mlab.com:44787/inventory" // mongodb://domain:port/database-name
 
 // Connect to MongoDB
