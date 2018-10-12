@@ -31,6 +31,13 @@ Email: admin@mail.com
 Password: admin
 ```
 
+** For User
+```bash
+Email: user@mail.com
+Password: user
+```
+or just sign up
+
 ### Stack details
 This Application was built with the following technologies
 
