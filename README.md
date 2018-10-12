@@ -34,6 +34,6 @@ Password: admin
 ### Stack details
 This Application was built with the following technologies
 
-[x]Express/Node js for the backend
-[x]MongoDb for the Database
-[x]Ejs(Embedded Javascript ) for the View engine
+* Express/Node js for the backend
+* MongoDb for the Database
+* Ejs(Embedded Javascript ) for the View engine
